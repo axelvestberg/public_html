@@ -1,0 +1,32 @@
+.drop-button {
+	background-color: lightskyblue;
+	color: white;
+	padding: 12px 16px;
+	font-size: 16px;
+	border: none;
+	font-family: "Courier New", Courier, monospace;
+	width: 232px;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.websites {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	z-index: 1;
+}
+
+.websites a {
+	color: black;
+	font-family: "Courier New", Courier, monospace;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	background-color: darkcyan;
+	width: 200px;
+}

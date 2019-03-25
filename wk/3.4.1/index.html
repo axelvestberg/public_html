@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script src="script.js" async></script>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+			defer
+		></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="author" content="Axel Vestberg" />
+		<meta name="description" content="" />
+		<meta name="generator" content="memememe" />
+		<meta name="keywords" content="" />
+		<meta name="robots" content="noindex" />
+		<meta http-equiv="refresh" content="1000" />
+		<title>3.4.1</title>
+	</head>
+
+	<body>
+		<h2>Show, Hide & Toggle</h2>
+		<button onclick="showButton()">Show</button>
+		<button onclick="hideButton()">Hide</button>
+		<button onclick="toggleButton()">Toggle</button>
+		<p id="textOne">Göm och visa den här texten med knapparna ovan</p>
+		<h2>FadeIn, FadeOut, FadeToggle & FadeTo</h2>
+		<button onclick="fadeInButton()">Fade In</button>
+		<button onclick="fadeOutButton()">Fade Out</button>
+		<button onclick="fadeToggleButton()">Fade Toggle</button>
+		<button onclick="fadeToButton()">Fade To 50%</button>
+		<p id="textTwo">Göm och visa den här texten med knapparna ovan</p>
+		<h2>Animate</h2>
+		<button onclick="animateButton()">Animate</button>
+		<button onclick="resetAnimateButton()">Reset</button>
+		<div id="animateDiv"></div>
+		<h2>Easing - Linear/Swing</h2>
+		<button onclick="linearButton()">Fade Out - Linear</button>
+		<button onclick="swingButton()">Fade In - Swing</button>
+		<div id="myDiv"></div>
+	</body>
+</html>

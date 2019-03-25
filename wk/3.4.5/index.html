@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+			defer
+		></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Axel Vestberg" />
+		<script src="script.js" async></script>
+		<title>3.4.5</title>
+	</head>
+	<body>
+		<form id="myForm">
+			<fieldset>
+				<legend>Förfrågan om att hyra fordon</legend>
+				<input
+					type="text"
+					id="firstname"
+					placeholder="Namn"
+					autofocus
+					required
+				/><br />
+				<input
+					type="text"
+					id="lastname"
+					placeholder="Efternamn"
+					required
+				/><br />
+				<input
+					type="email"
+					id="email"
+					placeholder="example@example.com"
+				/><br />
+				<input
+					type="radio"
+					class="vehicleClass"
+					name="vehicle"
+					value="bil"
+				/>Bil<br />
+				<input
+					type="radio"
+					class="vehicleClass"
+					name="vehicle"
+					value="cykel"
+				/>Cykel<br />
+
+				<input type="number" id="number" />Skriv in talet 9 för att validera<br />
+				<input type="checkbox" id="agree" required />Jag godkänner villkoren<br />
+				<input type="submit" value="Skicka" />
+			</fieldset>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+	margin-top: 16px;
+}
+
+a:link {
+	color: black;
+	background-color: orange;
+	text-decoration: none;
+	margin-left: 5px;
+	border: solid 5px orange;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+a:visited {
+	background-color: transparent;
+	text-decoration: none;
+	border: solid 5px orange;
+	color: black;
+	font-size: 20px;
+}
+
+a:hover {
+	color: green;
+	text-decoration: underline;
+	font-size: 25px;
+}
+
+a:active {
+	color: pink;
+	background-color: transparent;
+	text-decoration: underline;
+}
+a.link {
+	border: solid red 3px;
+	background-color: red;
+	border-radius: 5px;
+}
+img {
+	width: 200px;
+	height: auto;
+	border: solid red 1px;
+}
+img:hover {
+	border: solid green 10px;
+}

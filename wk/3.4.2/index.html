@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script src="script.js" async></script>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+			defer
+		></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="author" content="Axel Vestberg" />
+		<meta name="description" content="" />
+		<meta name="generator" content="memememe" />
+		<meta name="keywords" content="" />
+		<meta name="robots" content="noindex" />
+		<meta http-equiv="refresh" content="1000" />
+		<title>3.4.2</title>
+	</head>
+
+	<body>
+		<h2>Bildbyte (attr) & Bildbyte rollover-effekt</h2>
+		<img id="bildAttr" src="../images/harold1.jpg" /><br />
+		<p>Klicka på knappen nedan för rollover effekt på bilden</p>
+		<button onclick="rolloverFunction()">Rollover</button><br />
+		<img id="bildRollover" src="../images/harold2.jpg" />
+		<h2>Dynamisk grafik med HTML5-elementet canvas</h2>
+		<h2>Rita raka linjer och kurvlinjer</h2>
+		<canvas id="c1"></canvas>
+		<canvas id="c2"></canvas>
+		<h2>
+			Rita bézier-kurvor och former ifyllda med både färg, mönster och
+			gradienter
+		</h2>
+		<canvas id="c3"></canvas>
+		<canvas id="c4"></canvas>
+		<canvas id="c5"></canvas>
+		<h2>Rita text (exempelvis dagens datum/tid)</h2>
+		<canvas id="c6"></canvas>
+		<h2>
+			Använda transparens och skuggor
+		</h2>
+		<canvas id="c7"></canvas>
+		<h2>Lägga till en eller flera bitmappad bilder</h2>
+		<canvas id="c8"></canvas>
+		<h2>Använda en teknik för att spara bilden</h2>
+		<canvas id="c9"></canvas><br />
+		<a id="downloadId" download="canvas9.png"></a>
+		<button onclick="saveButton()">Spara bilden</button>
+	</body>
+</html>

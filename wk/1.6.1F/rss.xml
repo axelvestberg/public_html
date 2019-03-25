@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+  <channel>
+    <title>RSS 1.6.1F</title>
+    <link>http://localhost:8080/1.6.1F/index.html</link>
+    <description>Testa RSS poddradio och podd-tv</description>
+    <item>
+      <title>MP3</title>
+      <link>http://localhost:8080/1.6.1F/rss.xml</link>
+      <guid>http://techslides.com/demos/samples/sample.mp3</guid>
+      <description>En MP3 fil</description>
+      <enclosure url="http://techslides.com/demos/samples/sample.mp3" length="55203" type="audio/mpeg" />
+    </item>
+    <item>
+      <title>MP4</title>
+      <link>http://localhost:8080/1.6.1F/rss.xml</link>
+      <guid>http://techslides.com/demos/samples/sample.mp4</guid>
+      <description>En MP4 fil</description>
+      <enclosure url="http://techslides.com/demos/samples/sample.mp4" length="383631" type="video/mp4" />
+    </item>
+  </channel>
+
+</rss>

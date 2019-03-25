@@ -1,0 +1,9 @@
+img {
+	max-width: 250px;
+	max-height: 200px;
+	width: auto;
+	height: auto;
+}
+a {
+	padding: 5px;
+}

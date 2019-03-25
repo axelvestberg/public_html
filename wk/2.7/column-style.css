@@ -1,0 +1,23 @@
+.header {
+	padding: 20px;
+	background: grey;
+	text-align: center;
+}
+#col-count {
+	column-count: 3;
+	padding: 20px;
+}
+#col-width {
+	column-width: 200px;
+	padding: 20px;
+}
+.footer {
+	padding: 20px;
+	background: grey;
+	text-align: center;
+	clear: both;
+}
+h2,
+h3 {
+	text-align: center;
+}

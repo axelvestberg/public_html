@@ -1,0 +1,28 @@
+button {
+	margin: 5px;
+}
+p {
+	margin-left: 5px;
+}
+#scrollable {
+	border: 1px solid grey;
+	width: 250px;
+	height: 150px;
+	overflow: scroll;
+}
+#hoverbox {
+	width: 100px;
+	height: 100px;
+	margin-left: 100px;
+	background: red;
+	float: left;
+	clear: both;
+	bottom: 0;
+	left: 0;
+}
+#boxtext {
+	color: white;
+	text-align: center;
+	margin-top: 40px;
+	margin-right: 8px;
+}

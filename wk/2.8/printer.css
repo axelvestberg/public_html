@@ -1,0 +1,11 @@
+@page {
+	size: A4 portrait;
+}
+@media print {
+	#green,
+	#blue,
+	#yellow,
+	#red {
+		page-break-inside: avoid;
+	}
+}

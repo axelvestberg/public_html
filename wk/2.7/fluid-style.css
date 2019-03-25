@@ -1,0 +1,32 @@
+.header {
+	padding: 20px;
+	background: grey;
+	text-align: center;
+}
+#mid {
+	width: 50%;
+	height: 500px;
+	float: left;
+	background: green;
+	text-align: center;
+}
+#left {
+	width: 25%;
+	height: 500px;
+	float: left;
+	background: orange;
+	text-align: center;
+}
+#right {
+	width: 25%;
+	height: 500px;
+	float: left;
+	background: orange;
+	text-align: center;
+}
+.footer {
+	padding: 20px;
+	background: grey;
+	text-align: center;
+	clear: both;
+}
