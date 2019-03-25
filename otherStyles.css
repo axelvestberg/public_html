@@ -1,29 +1,35 @@
 .homepage {
-    background: lightblue;
+  background: lightblue;
 }
 
 .link-container {
-    padding: 30px;
-    margin: 30px;
-    background: lightcyan;
-    border-radius: 5px;
-    text-align: center;
-    -webkit-box-shadow: 11px 10px 45px -7px rgba(0,0,0,0.48);
-    -moz-box-shadow: 11px 10px 45px -7px rgba(0,0,0,0.48);
-    box-shadow: 11px 10px 45px -7px rgba(0,0,0,0.48);
+  padding: 30px;
+  margin: 30px;
+  background: lightcyan;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-shadow: 11px 10px 45px -7px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 11px 10px 45px -7px rgba(0, 0, 0, 0.48);
+  box-shadow: 11px 10px 45px -7px rgba(0, 0, 0, 0.48);
 }
 .link-container h1 {
-    font-size: 3em;
-    font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.nav a {
-    margin: 3px;
-    font-size: 1.5em;
-    text-decoration: none;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
+.nav a,
+#home {
+  margin: 3px;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a:hover {
-    color: grey;
+  color: grey;
+}
+#home {
+  position: absolute;
+  top: 50px;
+  left: 60px;
 }

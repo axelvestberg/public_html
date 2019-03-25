@@ -1,39 +1,34 @@
 body {
-	background: url(https://i.imgur.com/JhNsKXN.jpg);
-	background-size: cover;
-	width: 100%;
-	height: 500px;
-	background-repeat: no-repeat;
+  background: url(https://i.imgur.com/JhNsKXN.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
 }
 h1 {
-	background: url(https://i.imgur.com/OdRmJmD.jpg);
-	background-size: contain;
+  background: url(https://i.imgur.com/OdRmJmD.jpg);
+  background-size: contain;
 }
 li {
-	background: url(https://i.imgur.com/OdRmJmD.jpg);
-	color: white;
-	background-size: contain;
-	opacity: 0.5;
+  background: url(https://i.imgur.com/OdRmJmD.jpg);
+  color: white;
+  background-size: contain;
+  opacity: 0.5;
 }
 p {
-	color: white;
-	font-size: 20px;
-	background: orange;
-	opacity: 0.5;
+  color: white;
+  font-size: 20px;
+  background: orange;
+  opacity: 0.5;
 }
 img {
-	width: auto;
-	height: 200px;
-	border-radius: 20px;
-	border: solid red;
-	background-size: contain;
-	float: left;
+  width: auto;
+  height: 200px;
+  border-radius: 20px;
+  border: solid red;
+  background-size: contain;
+  float: left;
 }
 div.div1 {
-	clear: both;
-}
-a {
-	background-color: white;
-	font-size: 20px;
-	padding: 10px;
+  clear: both;
 }
