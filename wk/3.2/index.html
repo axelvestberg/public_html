@@ -1,61 +1,89 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="styles.css" />
-		<link rel="stylesheet" type="text/css" href="/otherStyles.css" />
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-			defer
-		></script>
-		<script src="script.js" defer></script>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../otherStyles.css" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<meta name="author" content="Axel Vestberg" />
-		<meta name="description" content="" />
-		<meta name="generator" content="memememe" />
-		<meta name="keywords" content="" />
-		<meta name="robots" content="noindex" />
-		<meta http-equiv="refresh" content="1000" />
-		<title>3.2</title>
-	</head>
+    <meta name="author" content="Axel Vestberg" />
+    <meta name="description" content="" />
+    <meta name="generator" content="memememe" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content="1000" />
+    <title>3.2</title>
+  </head>
 
-	<body>
-		<button id="change">Ändra en egenskap för ett HTML-elementet</button>
-		<br />
-		<button id="add">Lägga till nytt innehåll till ett HTML-elementet</button>
-		<p id="addHtml">Här ska det nya innehållet visas</p>
-		<p id="remove">Klicka här för att ta bort det här HTML-elementet</p>
-		<p id="extract">Utvinna information från ett HTML-element</p>
-		<p id="class">
-			Lägga till och ta bort ett klass-attribut från ett HTML-element
-		</p>
-		<div id="scrollable">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis
-			lectus tellus, sit amet consequat neque hendrerit sit amet. Nullam mollis
-			feugiat ante ac pellentesque. Suspendisse vitae nibh quis ante condimentum
-			tincidunt vitae ut leo. Nam pharetra vulputate felis, sed bibendum diam
-			commodo sit amet. Morbi erat arcu, aliquet vitae malesuada vel, rhoncus ac
-			mi. Sed imperdiet sapien a laoreet lacinia. In varius elit est, ac rhoncus
-			nunc auctor a.
-		</div>
-		<p>Du har scrollat <span id="scroll">0</span> gånger.</p>
-		<p>
-			Räkna antalet tecken som skrivits in i fältet: <input type="text" />
-			<span id="press">0</span>
-		</p>
-		<a href="../2.5/index.html"
-			><button id="prevent">
-				Den här knappen ska ta dig till uppgift 2.5 men gör inte det
-			</button></a
-		>
-		<p>Muspekare är på positionen: <span id="position"></span></p>
-		<div id="hoverbox"><p id="boxtext">Hover here</p></div>
-		<button id="off">
-			Tryck på mig för att ta bort klick eventet på paragrafen nedan
-		</button>
-		<p id="offp">
-			Om du klickat på knappen ovan innan du klickar på mig så händer inget
-		</p>
-	</body>
+  <body>
+    <section class="link-container">
+      <a id="home" href="/axve5162">Home</a>
+      <h1>Webbutveckling Klientsidan</h1>
+      <nav class="nav">
+        <a href="../1.1/index.html">1.1</a>
+        <a href="../1.2/index.html">1.2</a>
+        <a href="../1.3/index.html">1.3</a>
+        <a href="../1.4/index.html">1.4</a>
+        <a href="../1.6.1F/index.html">1.6.1F</a>
+        <a href="../1.6.2/index.html">1.6.2</a>
+        <a href="../2.1/index.html">2.1</a>
+        <a href="../2.2/index.html">2.2</a>
+        <a href="../2.3/index.html">2.3</a>
+        <a href="../2.4/index.html">2.4</a>
+        <a href="../2.5/index.html">2.5</a>
+        <a href="../2.6/index.html">2.6</a>
+        <a href="../2.7/column.html">2.7</a>
+        <a href="../2.8/index.html">2.8</a>
+        <a href="../3.1/index.html">3.1</a>
+        <a href="../3.2/index.html">3.2</a>
+        <a href="../3.3/index.html">3.3</a>
+        <a href="../3.4.1/index.html">3.4.1</a>
+        <a href="../3.4.2/index.html">3.4.2</a>
+        <a href="../3.4.3/index.html">3.4.3</a>
+        <a href="../3.4.4/index.html">3.4.4</a>
+        <a href="../3.4.5/index.html">3.4.5</a>
+      </nav>
+    </section>
+    <button id="change">Ändra en egenskap för ett HTML-elementet</button>
+    <br />
+    <button id="add">Lägga till nytt innehåll till ett HTML-elementet</button>
+    <p id="addHtml">Här ska det nya innehållet visas</p>
+    <p id="remove">Klicka här för att ta bort det här HTML-elementet</p>
+    <p id="extract">Utvinna information från ett HTML-element</p>
+    <p id="class">
+      Lägga till och ta bort ett klass-attribut från ett HTML-element
+    </p>
+    <div id="scrollable">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis
+      lectus tellus, sit amet consequat neque hendrerit sit amet. Nullam mollis
+      feugiat ante ac pellentesque. Suspendisse vitae nibh quis ante condimentum
+      tincidunt vitae ut leo. Nam pharetra vulputate felis, sed bibendum diam
+      commodo sit amet. Morbi erat arcu, aliquet vitae malesuada vel, rhoncus ac
+      mi. Sed imperdiet sapien a laoreet lacinia. In varius elit est, ac rhoncus
+      nunc auctor a.
+    </div>
+    <p>Du har scrollat <span id="scroll">0</span> gånger.</p>
+    <p>
+      Räkna antalet tecken som skrivits in i fältet: <input type="text" />
+      <span id="press">0</span>
+    </p>
+    <a href="../2.5/index.html"
+      ><button id="prevent">
+        Den här knappen ska ta dig till uppgift 2.5 men gör inte det
+      </button></a
+    >
+    <p>Muspekare är på positionen: <span id="position"></span></p>
+    <div id="hoverbox"><p id="boxtext">Hover here</p></div>
+    <button id="off">
+      Tryck på mig för att ta bort klick eventet på paragrafen nedan
+    </button>
+    <p id="offp">
+      Om du klickat på knappen ovan innan du klickar på mig så händer inget
+    </p>
+  </body>
 </html>
