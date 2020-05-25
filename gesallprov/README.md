@@ -1,7 +1,7 @@
 # Gesällprov
 
 Plan:
-- Receptsida - hämta data från yummly api och visa upp + simpel funktionalitet
+- Receptsida - hämta data från edamam + simpel funktionalitet
 
 MVP funktionalitet:
 - Söka recept
@@ -14,3 +14,6 @@ MVP funktionalitet:
 
 Stack:
 - Vanilla js, html, php - mysql databas för att spara favoritrecept
+
+Notes:
+- Basic api call: curl "https://api.edamam.com/search?q=chicken&app_id=c950b701&app_key=3227595a44a82292164fed1f488323f7&from=0&to=3"
