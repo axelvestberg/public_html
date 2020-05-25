@@ -10,9 +10,9 @@ $parts = parse_url($url);
 echo "$html_pieces[0]";
 
 $other_html = str_replace('---name---', $nametest, $html_pieces[1]);
-$other_html = str_replace('---value---', $valuetest, $other_html);
-$other_html = str_replace('---recept---', $parts, $other_html)
-echo $other_html;
+$second = str_replace('---value---', $valuetest, $other_html);
+$third = str_replace('---recept---', $parts, $second)
+echo "$third";
 
 echo "$html_pieces[2]";
 ?>
