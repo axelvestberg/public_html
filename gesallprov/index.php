@@ -9,7 +9,7 @@ $url = "https://api.edamam.com/search?q=chicken&app_id=c950b701&app_key=3227595a
 // $parts = parse_url($url);
 $obj = json_decode($url);
 
-foreach($obj->hits as $key => $value) {
+foreach((object) $obj->hits as $key => $value) {
     $other_html = str_replace('---name---', $key, $html_pieces[1]);
     $other_html = str_replace('---value---', $value, $other_html);
     echo $other_html;
