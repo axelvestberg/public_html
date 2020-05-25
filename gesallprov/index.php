@@ -5,7 +5,7 @@ $html_pieces = explode("<!--===xxx===-->", $html);
 
 echo "$html_pieces[0]";
 
-$replace = str_replace('---value---', "test", $html_pieces[1]);
+$replace = str_replace('---value---', 'test', $html_pieces[1]);
 echo $replace
 
 echo "$html_pieces[2]";
