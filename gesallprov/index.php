@@ -6,8 +6,7 @@ $nametest = "nametest";
 $valuetest = "valuetest";
 
 $url = "https://api.edamam.com/search?q=chicken&app_id=c950b701&app_key=3227595a44a82292164fed1f488323f7&from=0&to=3";
-// $parts = parse_url($url);
-$obj = json_decode($url);
+$obj = json_decode($url, false);
 
 foreach($obj as $key->hits => $value) {
     $other_html = str_replace('---name---', $key, $html_pieces[1]);
