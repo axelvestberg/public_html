@@ -33,10 +33,12 @@ $todos_array = json_decode($todos_json, true);
 </head>
 <body>
     <h1>Search recipes</h1>
-    <form action="" method="get">
-        <input type="text" name="id"/>
-        <button type="submit">Submit</button>
-    </form>
+    <div id="search-form">
+        <form action="" method="get">
+            <input type="text" name="id"/>
+            <button id="search-button" type="submit">Submit</button>
+        </form>
+    </div>
 <br/>
     <?php
     echo '<div class="container">';
@@ -60,7 +62,7 @@ $todos_array = json_decode($todos_json, true);
     echo '</div>';
     ?>
     <form action="" method="post">
-        <button type="submit" onclick="getMoreRecipes()">Show more recipes</button>
+        <button id="showmore" type="submit" onclick="getMoreRecipes()"></i>Show more recipes</button>
     </form>
 </body>
 </html>

@@ -93,6 +93,57 @@ button {
 	color: blue;
 }
 
+#showmore {
+	margin-top: 0.5rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	background-color: lightgrey;
+	border-radius: 1rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-style: none;
+}
+
+#search-button {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	background-color: lightgrey;
+	border-radius: 1rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-style: none;
+}
+
+input[type="text"] {
+	background-color: lightgrey;
+	border-radius: 1rem;
+	border-style: none;
+	padding: 4px;
+	margin: 2px;
+	width: 10rem;
+	font: 'Segoe UI';
+	border-image: none;
+	box-sizing: none;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+input[type=text]:focus {
+	border: 2px solid #555;
+	border-radius: 1rem;
+	outline: none;
+	padding: 2px;
+	margin: 2px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+#showmore>text {
+	padding-left: 1rem;
+}
+
 #like:hover {
 	fill: black;
 }
