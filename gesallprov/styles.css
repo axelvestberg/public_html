@@ -103,6 +103,7 @@ button {
 	border-radius: 1rem;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	border-style: none;
+	margin-bottom: 3rem;
 }
 
 #search-button {
