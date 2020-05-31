@@ -41,28 +41,28 @@ $todos_array = json_decode($todos_json, true);
             <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
             <br>
             <label class="container">American
-            <input type="checkbox" name="cuisineType[]" value="american" <?php if(!isempty($_GET['cuisineType'])) { echo in_array('american', $_GET['cuisineType']) ? "checked" : '' }?>
+            <input type="checkbox" name="cuisineType[]" value="american" <?php echo in_array('american', $_GET['cuisineType']) ? "checked" : ''?> />
             <span class="checkmark"></span>
             </label>
             <label class="container">French
-            <input type="checkbox" name="cuisineType[]" value="french" <?php if(!isempty($_GET['cuisineType'])) { echo in_array('french', $_GET['cuisineType']) ? "checked" : '' }?>
+            <input type="checkbox" name="cuisineType[]" value="french" <?php echo in_array('french', $_GET['cuisineType']) ? "checked" : ''?> />
             <span class="checkmark"></span>
             </label>
             <label class="container">Asian
-            <input type="checkbox" name="cuisineType[]" value="asian" <?php if(!isempty($_GET['cuisineType'])) { echo in_array('asian', $_GET['cuisineType']) ? "checked" : '' }?>
+            <input type="checkbox" name="cuisineType[]" value="asian" <?php echo in_array('asian', $_GET['cuisineType']) ? "checked" : ''?> />
             <span class="checkmark"></span>
             </label>
             <br>
             <label class="container">No dairy
-            <input type="checkbox" name="health[]" value="dairy-free" <?php echo in_array('dairy-free', $_GET['health']) ? "checked" : '' ?>>
+            <input type="checkbox" name="health[]" value="dairy-free" <?php echo in_array('dairy-free', $_GET['health']) ? "checked" : '' ?>/>
             <span class="checkmark"></span>
             </label>
             <label class="container">Vegetarian
-            <input type="checkbox" name="health[]" value="vegetarian" <?php echo in_array('vegetarian', $_GET['health']) ? "checked" : '' ?>>
+            <input type="checkbox" name="health[]" value="vegetarian" <?php echo in_array('vegetarian', $_GET['health']) ? "checked" : '' ?>/>
             <span class="checkmark"></span>
             </label>
             <label class="container">No gluten
-            <input type="checkbox" name="health[]" value="gluten-free" <?php echo in_array('gluten-free', $_GET['health']) ? "checked" : '' ?>>
+            <input type="checkbox" name="health[]" value="gluten-free" <?php echo in_array('gluten-free', $_GET['health']) ? "checked" : '' ?>/>
             <span class="checkmark"></span>
         </form>
     </div>
