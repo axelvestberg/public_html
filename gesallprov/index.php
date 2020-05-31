@@ -41,7 +41,7 @@ $todos_array = json_decode($todos_json, true);
             <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
             <br>
             <label class="container">American
-            <input type="checkbox" name="cuisineType[]" value="american" <?php echo in_array('american', $_GET['cuisineType']) ? "checked" : ''?> />
+            <input type="checkbox" name="cuisineType[]" value="american" <?php if (!empty($_GET['cuisineType'])) echo in_array('american', $_GET['cuisineType']) ? "checked" : '' ?> />
             <span class="checkmark"></span>
             </label>
             <label class="container">French
