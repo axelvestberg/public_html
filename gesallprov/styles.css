@@ -129,6 +129,7 @@ input[type="text"] {
 	box-sizing: none;
 	padding-top: 9px;
 	padding-bottom: 9px;
+	padding-left: 10px;
 }
 
 input[type=text]:focus {
@@ -139,6 +140,7 @@ input[type=text]:focus {
 	margin: 2px;
 	padding-top: 7px;
 	padding-bottom: 7px;
+	padding-left: 8px;
 }
 
 #showmore>text {
