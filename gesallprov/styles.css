@@ -1,21 +1,98 @@
-.header {
-	height: 50px;
-	color: white;
-	background: grey;
+html {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+	width: 800;
+}
+
+.container>#showing {
 	text-align: center;
-	padding: 10px;
+	margin-bottom: 0.5rem;
 }
-.footer {
-	height: 100px;
-	color: white;
-	background: grey;
+
+.recipe-container {
+	display: grid;
+	width: 800px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 1rem;
+	margin: auto;
+}
+
+form {
 	text-align: center;
-	padding: 10px;
-	font-size: 20px;
+	margin: auto;
+	align-self: center;
+	width: 800px;
 }
-table {
-	font-family: Arial, Helvetica, sans-serif;
+
+.recipe-container>a>div>img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem;
 }
-body {
+
+.recipe-container>a>div {
+	position: relative;
+	height: 275px;
 	overflow: hidden;
+	background-color: rgba(228, 233, 237, 0.5);
+	border-radius: 10px;
+}
+
+.label {
+	/* text-align: center; */
+	display: block;
+	text-decoration: none;
+	color: black;
+	margin-left: 1rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	/* number of lines to show */
+	-webkit-box-orient: vertical;
+}
+
+span {
+	margin-top: 0.25rem;
+}
+
+h1 {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+/* 
+input {
+	background-color: white;
+	border-radius: 1rem;
+	width: 10rem;
+}
+
+button {
+	background-color: grey;
+	border-radius: 1rem;
+	width: 10rem;
+} */
+
+#like {
+	text-decoration: none;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	color: blue;
+}
+
+#like:hover {
+	fill: black;
 }

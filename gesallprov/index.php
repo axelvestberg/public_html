@@ -1,24 +1,66 @@
 <?php
 
-$html = file_get_contents("index.html");
-$html_pieces = explode("<!--===xxx===-->", $html);
-$nametest = "nametest";
-$valuetest = "valuetest";
+$numberOfRecipes = 20;
 
-$url = "https://api.edamam.com/search?q=chicken&app_id=c950b701&app_key=3227595a44a82292164fed1f488323f7&from=0&to=3";
-$obj = json_decode($url, false);
-
-foreach($obj as $key->hits => $value) {
-    $other_html = str_replace('---name---', $key, $html_pieces[1]);
-    $other_html = str_replace('---value---', $value, $other_html);
-    echo $other_html;
+if (!empty($_POST['showmore'])) {
+    showMore();
 }
-echo "$html_pieces[0]";
 
-// $other_html = str_replace('---name---', $nametest, $html_pieces[1]);
-// $second = str_replace('---value---', $valuetest, $other_html);
-// $third = str_replace('---recept---', $parts, $second);
-// echo "$third";
+function showMore() {
+    $numberOfRecipes = $numberOfRecipes + 4;
+    print_r($numberOfRecipes);
+}
 
-echo "$html_pieces[2]";
+if (!empty($_GET['id'])) {
+    $todos_url = "https://api.edamam.com/search?q=" . urlencode($_GET['id']) . "&app_id=c950b701&app_key=3227595a44a82292164fed1f488323f7&from=0&to=" . $numberOfRecipes;
+} else {
+    $todos_url = "https://api.edamam.com/search?q=easy&app_id=c950b701&app_key=3227595a44a82292164fed1f488323f7&from=0&to=" . $numberOfRecipes;
+}
+
+$todos_json = file_get_contents($todos_url);
+$todos_array = json_decode($todos_json, true);
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Recipe Finder</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/870e39642e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+    <h1>Search recipes</h1>
+    <form action="" method="get">
+        <input type="text" name="id"/>
+        <button type="submit">Submit</button>
+    </form>
+<br/>
+    <?php
+    echo '<div class="container">';
+    echo '<div id="showing">';
+    echo "showing " . $numberOfRecipes . " of " . $todos_array['count'] . " recipes";
+    echo '</div>';
+    echo '<div class="recipe-container">';
+    if (!empty($todos_array)) {
+        foreach($todos_array['hits'] as $todo) {
+            echo '<a href="' . $todo['recipe']['url'] . '">';
+            echo '<div>';
+            echo '<img src="' . $todo['recipe']['image'] . '" width="150" height="150">';
+            echo '<span title="' . $todo['recipe']['label'] . '" class="label">' . $todo['recipe']['label'] . '</span>';
+            echo '<span class="label">' . $todo['recipe']['totalTime'] . ' minutes </span>';
+            echo '<i id="like" class="far fa-heart"></i>';
+            echo '</div>';
+            echo '</a>';
+        }
+    }
+    echo '</div>';
+    echo '</div>';
+    ?>
+    <form action="" method="post">
+        <button type="submit" onclick="getMoreRecipes()">Show more recipes</button>
+    </form>
+</body>
+</html>
