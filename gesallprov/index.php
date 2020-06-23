@@ -11,16 +11,25 @@ function showMore() {
     print_r($numberOfRecipes);
 }
 // $query = http_build_query($_GET['health'], $_GET['cuisineType']);
+$base_url = "https://api.edamam.com/search?";
+$app_key = "3227595a44a82292164fed1f488323f7";
+$app_id = "c950b701";
+$search_string = urlencode($_GET['q']);
+$recipe_has_time = "&time=1%2B";
+$from = 0;
+$to = $numberOfRecipes;
 
-//TODO BUILD THE QUERY BUILDER WITH CHECKBOXES ETC
-if (!empty($_GET['id'])) {
-    $todos_url = "https://api.edamam.com/search?q=" . urlencode($_GET['id']) . "&app_id=c950b701&app_key=3227595a44a82292164fed1f488323f7&time=1%2B&from=0&to=" . $numberOfRecipes;
+$query_parameters = array("q"=> $search_string, "app_id"=> $app_id, "app_key"=> $app_key, "from" => $from, "to" => $to);
+$query_url = $base_url . http_build_query($query_parameters);
+if (!empty($_GET['health'])) {
+    // $query_url = $query_url . "&health=" . implode('&health=', $_GET['health']));
+    $query_url = $query_url . "&health=" .implode('&health=', $_GET['health']) . $recipe_has_time;
 } else {
-    $todos_url = "https://api.edamam.com/search?q=easy&app_id=c950b701&app_key=3227595a44a82292164fed1f488323f7&time=1%2B&from=0&to=" . $numberOfRecipes;
+    $query_url = "https://api.edamam.com/search?q=easy&app_id=c950b701&app_key=3227595a44a82292164fed1f488323f7&time=1%2B&from=0&to=20";
 }
 
-$todos_json = file_get_contents($todos_url);
-$todos_array = json_decode($todos_json, true);
+$query_json = file_get_contents($query_url);
+$query_array = json_decode($query_json, true);
 
 ?>
 
@@ -35,34 +44,34 @@ $todos_array = json_decode($todos_json, true);
 </head>
 <body>
     <h1>Search recipes</h1>
+    <?php 
+        print_r($query_url);
+        echo '<br>';
+        print_r(http_build_query(parse_str(array($_GET['health']))));
+        echo "<br>";
+        print_r($query_parameters['time']);
+        echo "<br>";
+        print_r(json_encode($_GET['health']));
+        echo "<br>";
+        print_r($_GET);
+        echo "<br>";
+        print_r('health='.implode('&health=',$_GET['health']));
+    ?>
     <div id="search-form">
         <form action="" method="get">
-            <input type="text" name="id" value="<?php echo (isset($_GET['id'])) ? htmlentities($_GET['id']) : '' ?>"/>
+            <input type="text" name="q" value="<?php echo (isset($_GET['q'])) ? htmlentities($_GET['q']) : '' ?>"/>
             <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
             <br>
-            <label class="container">American
-            <input type="checkbox" name="cuisineType[]" value="american" <?php if (!empty($_GET['cuisineType'])) echo in_array('american', $_GET['cuisineType']) ? "checked" : '' ?> />
-            <span class="checkmark"></span>
-            </label>
-            <label class="container">French
-            <input type="checkbox" name="cuisineType[]" value="french" <?php if (!empty($_GET['cuisineType'])) echo in_array('french', $_GET['cuisineType']) ? "checked" : ''?> />
-            <span class="checkmark"></span>
-            </label>
-            <label class="container">Asian
-            <input type="checkbox" name="cuisineType[]" value="asian" <?php if (!empty($_GET['cuisineType'])) echo in_array('asian', $_GET['cuisineType']) ? "checked" : ''?> />
-            <span class="checkmark"></span>
-            </label>
-            <br>
-            <label class="container">No dairy
-            <input type="checkbox" name="health[]" value="dairy-free" <?php if (!empty($_GET['health'])) echo in_array('dairy-free', $_GET['health']) ? "checked" : '' ?>/>
+            <label class="container">Vegan
+            <input type="checkbox" name="health[]" value="vegan" <?php if (!empty($_GET['health'])) echo in_array('vegan', $_GET['health']) ? "checked" : '' ?>/>
             <span class="checkmark"></span>
             </label>
             <label class="container">Vegetarian
             <input type="checkbox" name="health[]" value="vegetarian" <?php if (!empty($_GET['health'])) echo in_array('vegetarian', $_GET['health']) ? "checked" : '' ?>/>
             <span class="checkmark"></span>
             </label>
-            <label class="container">No gluten
-            <input type="checkbox" name="health[]" value="gluten-free" <?php if (!empty($_GET['health'])) echo in_array('gluten-free', $_GET['health']) ? "checked" : '' ?>/>
+            <label class="container">Peanut free
+            <input type="checkbox" name="health[]" value="peanut-free" <?php if (!empty($_GET['health'])) echo in_array('peanut-free', $_GET['health']) ? "checked" : '' ?>/>
             <span class="checkmark"></span>
         </form>
     </div>
@@ -70,16 +79,16 @@ $todos_array = json_decode($todos_json, true);
     <?php
     echo '<div class="container">';
     echo '<div id="showing">';
-    echo "showing " . $numberOfRecipes . " of " . $todos_array['count'] . " recipes";
+    echo "showing " . $numberOfRecipes . " of " . $query_array['count'] . " recipes";
     echo '</div>';
     echo '<div class="recipe-container">';
-    if (!empty($todos_array)) {
-        foreach($todos_array['hits'] as $todo) {
-            echo '<a href="' . $todo['recipe']['url'] . '">';
+    if (!empty($query_array)) {
+        foreach($query_array['hits'] as $recipe) {
+            echo '<a href="' . $recipe['recipe']['url'] . '">';
             echo '<div>';
-            echo '<img src="' . $todo['recipe']['image'] . '" width="150" height="150">';
-            echo '<span title="' . $todo['recipe']['label'] . '" class="label">' . $todo['recipe']['label'] . '</span>';
-            echo '<span class="label">' . $todo['recipe']['totalTime'] . ' minutes </span>';
+            echo '<img src="' . $recipe['recipe']['image'] . '" width="150" height="150">';
+            echo '<span title="' . $recipe['recipe']['label'] . '" class="label">' . $recipe['recipe']['label'] . '</span>';
+            echo '<span class="label">' . $recipe['recipe']['totalTime'] . ' minutes </span>';
             echo '<i id="like" class="far fa-heart"></i>';
             echo '</div>';
             echo '</a>';
