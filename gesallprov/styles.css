@@ -2,10 +2,6 @@ html {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container {
-	width: 800;
-}
-
 .container>#showing {
 	text-align: center;
 	margin-bottom: 0.5rem;
@@ -20,18 +16,20 @@ html {
 	margin: auto;
 }
 
+.health-checkbox {
+	margin-right: 0.5rem;
+}
+
 form {
 	text-align: center;
 	margin: auto;
 	align-self: center;
-	width: 800px;
 }
 
 .recipe-container>a>div>img {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 1rem;
+	margin: auto;
+	margin-top: 1rem;
 }
 
 .recipe-container>a>div {
@@ -54,6 +52,11 @@ form {
 	-webkit-line-clamp: 2;
 	/* number of lines to show */
 	-webkit-box-orient: vertical;
+
+}
+
+label {
+	margin-right: 0.75rem;
 }
 
 span {

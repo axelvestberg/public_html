@@ -14,7 +14,9 @@ function showMore() {
 $base_url = "https://api.edamam.com/search?";
 $app_key = "3227595a44a82292164fed1f488323f7";
 $app_id = "c950b701";
-$search_string = urlencode($_GET['q']);
+if (!empty($_GET['q'])) {
+    $search_string = urlencode($_GET['q']);
+}
 $recipe_has_time = "&time=1%2B";
 $from = 0;
 $to = $numberOfRecipes;
@@ -62,15 +64,15 @@ $query_array = json_decode($query_json, true);
             <input type="text" name="q" value="<?php echo (isset($_GET['q'])) ? htmlentities($_GET['q']) : '' ?>"/>
             <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
             <br>
-            <label class="container">Vegan
+            <label>Vegan
             <input type="checkbox" name="health[]" value="vegan" <?php if (!empty($_GET['health'])) echo in_array('vegan', $_GET['health']) ? "checked" : '' ?>/>
             <span class="checkmark"></span>
             </label>
-            <label class="container">Vegetarian
+            <label>Vegetarian
             <input type="checkbox" name="health[]" value="vegetarian" <?php if (!empty($_GET['health'])) echo in_array('vegetarian', $_GET['health']) ? "checked" : '' ?>/>
             <span class="checkmark"></span>
             </label>
-            <label class="container">Peanut free
+            <label>Peanut free
             <input type="checkbox" name="health[]" value="peanut-free" <?php if (!empty($_GET['health'])) echo in_array('peanut-free', $_GET['health']) ? "checked" : '' ?>/>
             <span class="checkmark"></span>
         </form>
