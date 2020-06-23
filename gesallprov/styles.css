@@ -26,13 +26,13 @@ form {
 	align-self: center;
 }
 
-.recipe-container>a>div>img {
+.recipe-container>div>a>div>img {
 	display: flex;
 	margin: auto;
 	margin-top: 1rem;
 }
 
-.recipe-container>a>div {
+.recipe-container>div>a>div {
 	position: relative;
 	height: 275px;
 	overflow: hidden;
@@ -96,6 +96,15 @@ button {
 	color: blue;
 }
 
+#test {
+	position: relative;
+}
+
+.far {
+	cursor: pointer;
+	user-select: none;
+}
+
 #showmore {
 	margin-top: 0.5rem;
 	padding-left: 3rem;
@@ -148,8 +157,4 @@ input[type=text]:focus {
 
 #showmore>text {
 	padding-left: 1rem;
-}
-
-#like:hover {
-	fill: black;
 }
