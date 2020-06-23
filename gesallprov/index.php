@@ -45,17 +45,17 @@ $query_array = json_decode($query_json, true);
 <body>
     <h1>Search recipes</h1>
     <?php 
-        print_r($query_url);
-        echo '<br>';
-        print_r(http_build_query(parse_str(array($_GET['health']))));
-        echo "<br>";
-        print_r($query_parameters['time']);
-        echo "<br>";
-        print_r(json_encode($_GET['health']));
-        echo "<br>";
-        print_r($_GET);
-        echo "<br>";
-        print_r('health='.implode('&health=',$_GET['health']));
+        // print_r($query_url);
+        // echo '<br>';
+        // print_r(http_build_query(parse_str(array($_GET['health']))));
+        // echo "<br>";
+        // print_r($query_parameters['time']);
+        // echo "<br>";
+        // print_r(json_encode($_GET['health']));
+        // echo "<br>";
+        // print_r($_GET);
+        // echo "<br>";
+        // print_r('health='.implode('&health=',$_GET['health']));
     ?>
     <div id="search-form">
         <form action="" method="get">
