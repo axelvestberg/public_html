@@ -14,15 +14,19 @@ function showMore() {
 $base_url = "https://api.edamam.com/search?";
 $app_key = "3227595a44a82292164fed1f488323f7";
 $app_id = "c950b701";
-if (!empty($_GET['q'])) {
-    $search_string = urlencode($_GET['q']);
-}
+
 $recipe_has_time = "&time=1%2B";
 $from = 0;
 $to = $numberOfRecipes;
 
-$query_parameters = array("q"=> $search_string, "app_id"=> $app_id, "app_key"=> $app_key, "from" => $from, "to" => $to);
+if (!empty($_GET['q'])) {
+    $search_string = urlencode($_GET['q']);
+    $query_parameters = array("q"=> $search_string, "app_id"=> $app_id, "app_key"=> $app_key, "from" => $from, "to" => $to);
+} else {
+    $query_parameters = array("q"=> "easy", "app_id"=> $app_id, "app_key"=> $app_key, "from" => $from, "to" => $to);
+}
 $query_url = $base_url . http_build_query($query_parameters);
+
 if (!empty($_GET['health'])) {
     // $query_url = $query_url . "&health=" . implode('&health=', $_GET['health']));
     $query_url = $query_url . "&health=" .implode('&health=', $_GET['health']) . $recipe_has_time;
