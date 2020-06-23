@@ -1,0 +1,155 @@
+html {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container>#showing {
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+
+.recipe-container {
+	display: grid;
+	width: 800px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 1rem;
+	margin: auto;
+}
+
+.health-checkbox {
+	margin-right: 0.5rem;
+}
+
+form {
+	text-align: center;
+	margin: auto;
+	align-self: center;
+}
+
+.recipe-container>a>div>img {
+	display: flex;
+	margin: auto;
+	margin-top: 1rem;
+}
+
+.recipe-container>a>div {
+	position: relative;
+	height: 275px;
+	overflow: hidden;
+	background-color: rgba(228, 233, 237, 0.5);
+	border-radius: 10px;
+}
+
+.label {
+	/* text-align: center; */
+	display: block;
+	text-decoration: none;
+	color: black;
+	margin-left: 1rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	/* number of lines to show */
+	-webkit-box-orient: vertical;
+
+}
+
+label {
+	margin-right: 0.75rem;
+}
+
+span {
+	margin-top: 0.25rem;
+}
+
+h1 {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+/* 
+input {
+	background-color: white;
+	border-radius: 1rem;
+	width: 10rem;
+}
+
+button {
+	background-color: grey;
+	border-radius: 1rem;
+	width: 10rem;
+} */
+
+#like {
+	text-decoration: none;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	color: blue;
+}
+
+#showmore {
+	margin-top: 0.5rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	background-color: lightgrey;
+	border-radius: 1rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-style: none;
+	margin-bottom: 3rem;
+}
+
+#search-button {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	background-color: lightgrey;
+	border-radius: 1rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-style: none;
+}
+
+input[type="text"] {
+	background-color: lightgrey;
+	border-radius: 1rem;
+	border-style: none;
+	padding: 4px;
+	margin: 2px;
+	width: 10rem;
+	font: 'Segoe UI';
+	border-image: none;
+	box-sizing: none;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 10px;
+}
+
+input[type=text]:focus {
+	border: 2px solid #555;
+	border-radius: 1rem;
+	outline: none;
+	padding: 2px;
+	margin: 2px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 8px;
+}
+
+#showmore>text {
+	padding-left: 1rem;
+}
+
+#like:hover {
+	fill: black;
+}
